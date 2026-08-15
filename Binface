@@ -1,0 +1,249 @@
+
+// Generated mapping code
+(function(e,t,n,r,i){function s(e,t,n,r){r=r instanceof Array?r:[];var i={};for(var s=0;s<r.length;s++){i[r[s]]=true}var o=function(e){this.element=e};o.prototype=n;e.fn[t]=function(){var n=arguments;var r=this;this.each(function(){var s=e(this);var u=s.data("plugin-"+t);if(!u){u=new o(s);s.data("plugin-"+t,u);if(u._init){u._init.apply(u,n)}}else if(typeof n[0]=="string"&&n[0].charAt(0)!="_"&&typeof u[n[0]]=="function"){var a=Array.prototype.slice.call(n,1);var f=u[n[0]].apply(u,a);if(n[0]in i){r=f}}});return r}}var o=370,u=215,a=10;var f={stateStyles:{fill:"#333",stroke:"#666","stroke-width":1,"stroke-linejoin":"round",scale:[1,1]},stateHoverStyles:{fill:"#33c",stroke:"#000",scale:[1.1,1.1]},stateSpecificStyles:{},stateSpecificHoverStyles:{},click:null,mouseover:null,mouseout:null,clickState:{},mouseoverState:{},mouseoutState:{},showLabels:true,labelWidth:20,labelHeight:15,labelGap:6,labelRadius:3,labelBackingStyles:{fill:"#333",stroke:"#666","stroke-width":1,"stroke-linejoin":"round",scale:[1,1]},labelBackingHoverStyles:{fill:"#33c",stroke:"#000"},stateSpecificLabelBackingStyles:{},stateSpecificLabelBackingHoverStyles:{},labelTextStyles:{fill:"#fff",stroke:"none","font-weight":300,"stroke-width":0,"font-size":"10px"},labelTextHoverStyles:{},stateSpecificLabelTextStyles:{},stateSpecificLabelTextHoverStyles:{}};var l={_init:function(t){this.options={};e.extend(this.options,f,t);var n=this.element.width();var i=this.element.height();var s=this.element.width()/o;var l=this.element.height()/u;this.scale=Math.min(s,l);this.labelAreaWidth=Math.ceil(a/this.scale);var c=o+Math.max(0,this.labelAreaWidth-a);this.paper=r(this.element.get(0),c,u);this.paper.setSize(n,i);this.paper.setViewBox(-180, -31, 144.50408323235206, 144.50408323235206, false);this.stateHitAreas={};this.stateShapes={};this.topShape=null;this._initCreateStates();this.labelShapes={};this.labelTexts={};this.labelHitAreas={};if(this.options.showLabels){this._initCreateLabels()}},_initCreateStates:function(){var t=this.options.stateStyles;var n=this.paper;var r={"Clacton":"m 760.78,1211.9 -0.16,0.99 -1.3,0.95 -0.35,-0.5 -0.7,-0.12 0.26,-0.87 1.47,-0.06 z m -1.77,-1.98 0.16,0.35 0.55,0.12 0.19,0.56 -0.32,0.67 -0.91,-0.09 z m 1.45,-0.73 -0.6,1 -0.54,0.07 -0.66,-0.93 -1.61,0.77 1.52,0.72 -0.41,0.45 -2.11,0.85 -0.57,1.68 h 1.39 l 0.42,-0.78 0.77,-0.48 0.09,0.5 0.52,1.13 0.5,0.85 0.88,0.18 1.1,-0.6 1.19,0.2 -0.56,-1.59 0.06,-1.38 1.89,1.28 -0.02,1.45 -1.88,3.04 -1.03,1.24 -1.31,1.83 -2.56,2.26 -3.18,1.82 -2.66,2.01 -1.66,0.69 -2.55,0.25 -1.28,0.32 -1.94,0.13 -1.01,-1.13 -0.2,-0.84 0.61,-0.5 -0.76,-1.04 -1.06,-0.6 0.25,-0.34 1.07,0.28 1.33,-0.63 1.03,-0.78 0.3,-0.76 -0.6,-1.1 0.04,-0.98 -1.17,-2.23 -0.48,-0.69 -1.15,0.18 -1.27,-0.58 -0.34,-1.16 0.78,-1.32 1.3,0.31 0.6,-0.1 1.04,-0.61 -0.07,-0.76 0.97,-2.78 2.39,-0.43 1.06,-0.9 0.55,-1.38 0.86,-0.84 1.15,-0.77 1.99,1.06 -0.09,0.71 0.75,0.71 1.72,0.26 0.65,-0.4 -0.08,-0.94 0.97,0.03 0.32,-0.36 1.28,-0.06 0.13,0.73 0.77,1.17 0.59,0.04 z"};var tr={"Clacton":"translate(50,10)"};var i={};for(var s in r){i={};if(this.options.stateSpecificStyles[s]){e.extend(i,t,this.options.stateSpecificStyles[s])}else{i=t}this.stateShapes[s]=n.path(r[s]).attr(i);if(tr[s]){if(this.stateShapes[s].node&&this.stateShapes[s].node.setAttribute){this.stateShapes[s].node.setAttribute("transform",tr[s])}else{this.stateShapes[s].transform(tr[s])}}this.topShape=this.stateShapes[s];this.stateHitAreas[s]=n.path(r[s]).attr({fill:"#000","stroke-width":0,opacity:0,cursor:"pointer"});if(tr[s]){if(this.stateHitAreas[s].node&&this.stateHitAreas[s].node.setAttribute){this.stateHitAreas[s].node.setAttribute("transform",tr[s])}else{this.stateHitAreas[s].transform(tr[s])}}this.stateHitAreas[s].node.dataState=s}this._onClickProxy=e.proxy(this,"_onClick");this._onMouseOverProxy=e.proxy(this,"_onMouseOver"),this._onMouseOutProxy=e.proxy(this,"_onMouseOut");for(var s in this.stateHitAreas){this.stateHitAreas[s].toFront();e(this.stateHitAreas[s].node).bind("mouseout",this._onMouseOutProxy);e(this.stateHitAreas[s].node).bind("click",this._onClickProxy);e(this.stateHitAreas[s].node).bind("mouseover",this._onMouseOverProxy)}},_initCreateLabels:function(){var t=this.paper;var n=[];var r=860;var i=220;var s=this.options.labelWidth;var o=this.options.labelHeight;var u=this.options.labelGap;var a=this.options.labelRadius;var f=s/this.scale;var l=o/this.scale;var c=(s+u)/this.scale;var h=(o+u)/this.scale*.5;var p=a/this.scale;var d=this.options.labelBackingStyles;var v=this.options.labelTextStyles;var m={};for(var g=0,y,b,w;g<n.length;++g){w=n[g];y=(g+1)%2*c+r;b=g*h+i,m={};if(this.options.stateSpecificLabelBackingStyles[w]){e.extend(m,d,this.options.stateSpecificLabelBackingStyles[w])}else{m=d}this.labelShapes[w]=t.rect(y,b,f,l,p).attr(m);m={};if(this.options.stateSpecificLabelTextStyles[w]){e.extend(m,v,this.options.stateSpecificLabelTextStyles[w])}else{e.extend(m,v)}if(m["font-size"]){m["font-size"]=parseInt(m["font-size"])/this.scale+"px"}this.labelTexts[w]=t.text(y+f/2,b+l/2,w).attr(m);this.labelHitAreas[w]=t.rect(y,b,f,l,p).attr({fill:"#000","stroke-width":0,opacity:0,cursor:"pointer"});this.labelHitAreas[w].node.dataState=w}for(var w in this.labelHitAreas){this.labelHitAreas[w].toFront();e(this.labelHitAreas[w].node).bind("mouseout",this._onMouseOutProxy);e(this.labelHitAreas[w].node).bind("click",this._onClickProxy);e(this.labelHitAreas[w].node).bind("mouseover",this._onMouseOverProxy)}},_getStateFromEvent:function(e){var t=e.target&&e.target.dataState||e.dataState;return this._getState(t)},_getState:function(e){var t=this.stateShapes[e];var n=this.stateHitAreas[e];var r=this.labelShapes[e];var i=this.labelTexts[e];var s=this.labelHitAreas[e];return{shape:t,hitArea:n,name:e,labelBacking:r,labelText:i,labelHitArea:s}},_onMouseOut:function(e){var t=this._getStateFromEvent(e);if(!t.hitArea){return}return!this._triggerEvent("mouseout",e,t)},_defaultMouseOutAction:function(t){var n={};if(this.options.stateSpecificStyles[t.name]){e.extend(n,this.options.stateStyles,this.options.stateSpecificStyles[t.name])}else{n=this.options.stateStyles}t.shape.animate(n,this.options.stateHoverAnimation);if(t.labelBacking){var n={};if(this.options.stateSpecificLabelBackingStyles[t.name]){e.extend(n,this.options.labelBackingStyles,this.options.stateSpecificLabelBackingStyles[t.name])}else{n=this.options.labelBackingStyles}t.labelBacking.animate(n,this.options.stateHoverAnimation)}},_onClick:function(e){var t=this._getStateFromEvent(e);if(!t.hitArea){return}return!this._triggerEvent("click",e,t)},_onMouseOver:function(e){var t=this._getStateFromEvent(e);if(!t.hitArea){return}return!this._triggerEvent("mouseover",e,t)},_defaultMouseOverAction:function(t){this.bringShapeToFront(t.shape);this.paper.safari();var n={};if(this.options.stateSpecificHoverStyles[t.name]){e.extend(n,this.options.stateHoverStyles,this.options.stateSpecificHoverStyles[t.name])}else{n=this.options.stateHoverStyles}t.shape.animate(n,this.options.stateHoverAnimation);if(t.labelBacking){var n={};if(this.options.stateSpecificLabelBackingHoverStyles[t.name]){e.extend(n,this.options.labelBackingHoverStyles,this.options.stateSpecificLabelBackingHoverStyles[t.name])}else{n=this.options.labelBackingHoverStyles}t.labelBacking.animate(n,this.options.stateHoverAnimation)}},_triggerEvent:function(t,n,r){var i=r.name;var s=false;var o=e.Event("usmap"+t+i);o.originalEvent=n;if(this.options[t+"State"][i]){s=this.options[t+"State"][i](o,r)===false}if(o.isPropagationStopped()){this.element.trigger(o,[r]);s=s||o.isDefaultPrevented()}if(!o.isPropagationStopped()){var u=e.Event("usmap"+t);u.originalEvent=n;if(this.options[t]){s=this.options[t](u,r)===false||s}if(!u.isPropagationStopped()){this.element.trigger(u,[r]);s=s||u.isDefaultPrevented()}}if(!s){switch(t){case"mouseover":this._defaultMouseOverAction(r);break;case"mouseout":this._defaultMouseOutAction(r);break}}return!s},trigger:function(e,t,n){t=t.replace("usmap","");e=e.toUpperCase();var r=this._getState(e);this._triggerEvent(t,n,r)},bringShapeToFront:function(e){if(this.topShape){e.insertAfter(this.topShape)}this.topShape=e}};var c=[];s(e,"usmap",l,c)})(jQuery,document,window,Raphael)
+
+campaignTrail_temp.questions_json = [
+    {
+        "model": "campaign_trail.question",
+        "pk": 6879,
+        "fields": {
+            "description": "put description here"
+        }
+    }
+];
+
+campaignTrail_temp.answers_json = [
+    {
+        "model": "campaign_trail.answer",
+        "pk": 6880,
+        "fields": {
+            "question": 6879,
+            "description": "New answer option"
+        }
+    }
+];
+
+campaignTrail_temp.states_json = [
+    {
+        "model": "campaign_trail.state",
+        "pk": 10907,
+        "fields": {
+            "name": "Clacton",
+            "abbr": "Clacton",
+            "electoral_votes": 1,
+            "popular_votes": 35111,
+            "poll_closing_time": 120,
+            "winner_take_all_flg": 1,
+            "election": "20"
+        },
+        "d": "m 760.78,1211.9 -0.16,0.99 -1.3,0.95 -0.35,-0.5 -0.7,-0.12 0.26,-0.87 1.47,-0.06 z m -1.77,-1.98 0.16,0.35 0.55,0.12 0.19,0.56 -0.32,0.67 -0.91,-0.09 z m 1.45,-0.73 -0.6,1 -0.54,0.07 -0.66,-0.93 -1.61,0.77 1.52,0.72 -0.41,0.45 -2.11,0.85 -0.57,1.68 h 1.39 l 0.42,-0.78 0.77,-0.48 0.09,0.5 0.52,1.13 0.5,0.85 0.88,0.18 1.1,-0.6 1.19,0.2 -0.56,-1.59 0.06,-1.38 1.89,1.28 -0.02,1.45 -1.88,3.04 -1.03,1.24 -1.31,1.83 -2.56,2.26 -3.18,1.82 -2.66,2.01 -1.66,0.69 -2.55,0.25 -1.28,0.32 -1.94,0.13 -1.01,-1.13 -0.2,-0.84 0.61,-0.5 -0.76,-1.04 -1.06,-0.6 0.25,-0.34 1.07,0.28 1.33,-0.63 1.03,-0.78 0.3,-0.76 -0.6,-1.1 0.04,-0.98 -1.17,-2.23 -0.48,-0.69 -1.15,0.18 -1.27,-0.58 -0.34,-1.16 0.78,-1.32 1.3,0.31 0.6,-0.1 1.04,-0.61 -0.07,-0.76 0.97,-2.78 2.39,-0.43 1.06,-0.9 0.55,-1.38 0.86,-0.84 1.15,-0.77 1.99,1.06 -0.09,0.71 0.75,0.71 1.72,0.26 0.65,-0.4 -0.08,-0.94 0.97,0.03 0.32,-0.36 1.28,-0.06 0.13,0.73 0.77,1.17 0.59,0.04 z",
+        "transform": "translate(50,10)"
+    }
+];
+
+campaignTrail_temp.issues_json = [
+    {
+        "model": "campaign_trail.issue",
+        "pk": 104,
+        "fields": {
+            "name": "",
+            "description": "",
+            "stance_1": "Very Conservative",
+            "stance_desc_1": "'",
+            "stance_2": "Conservative",
+            "stance_desc_2": "'",
+            "stance_3": "Leans Conservative",
+            "stance_desc_3": "'",
+            "stance_4": "Moderate",
+            "stance_desc_4": "'",
+            "stance_5": "Mostly accepting",
+            "stance_desc_5": "'",
+            "stance_6": "Accepting",
+            "stance_desc_6": "'",
+            "stance_7": "Very accepting",
+            "stance_desc_7": "'",
+            "election": 20
+        }
+    }
+];
+
+campaignTrail_temp.state_issue_score_json = [
+    {
+        "model": "campaign_trail.state_issue_score",
+        "pk": 10908,
+        "fields": {
+            "state": 10907,
+            "issue": 104,
+            "state_issue_score": 0,
+            "weight": 1.5
+        }
+    }
+];
+
+campaignTrail_temp.candidate_issue_score_json = [
+    {
+        "model": "campaign_trail.candidate_issue_score",
+        "pk": 10911,
+        "fields": {
+            "candidate": 1001,
+            "issue": 104,
+            "issue_score": 0
+        }
+    },
+    {
+        "model": "campaign_trail.candidate_issue_score",
+        "pk": 10914,
+        "fields": {
+            "candidate": 1003,
+            "issue": 104,
+            "issue_score": 0
+        }
+    }
+];
+
+campaignTrail_temp.running_mate_issue_score_json = [
+    {
+        "model": "campaign_trail.candidate_issue_score",
+        "pk": 1049,
+        "fields": {
+            "candidate": 209,
+            "issue": 104,
+            "issue_score": 0.45
+        }
+    }
+];
+
+campaignTrail_temp.candidate_state_multiplier_json = [
+    {
+        "model": "campaign_trail.candidate_state_multiplier",
+        "pk": 10910,
+        "fields": {
+            "candidate": 1001,
+            "state": 10907,
+            "state_multiplier": 1
+        }
+    },
+    {
+        "model": "campaign_trail.candidate_state_multiplier",
+        "pk": 10913,
+        "fields": {
+            "candidate": 1003,
+            "state": 10907,
+            "state_multiplier": 0.2
+        }
+    }
+];
+
+campaignTrail_temp.answer_score_global_json = [];
+
+campaignTrail_temp.answer_score_issue_json = [];
+
+campaignTrail_temp.answer_score_state_json = [];
+
+campaignTrail_temp.answer_feedback_json = [];
+
+campaignTrail_temp.candidate_image_url = "";
+campaignTrail_temp.running_mate_image_url = "";
+campaignTrail_temp.candidate_last_name = "Count";
+campaignTrail_temp.running_mate_last_name = "Binface";
+
+//#startcode
+// CYOA Variables
+var Cancer = 0;
+
+campaignTrail_temp.multiple_endings = true;
+
+campaignTrail_temp.cyoa = true;
+
+// pk -> index lookup for questions
+let _questionIdxByPk = null;
+
+function _rebuildQuestionIdxMap() {
+  _questionIdxByPk = new Map();
+  const arr = campaignTrail_temp.questions_json;
+  for (let i = 0; i < arr.length; i++) {
+    _questionIdxByPk.set(Number(arr[i].pk), i);
+  }
+}
+
+// returns the true array index (>= 0) or -1 if not found
+function getQuestionIndexFromPk(pk) {
+  const n = Number(pk);
+  if (!_questionIdxByPk) _rebuildQuestionIdxMap();
+
+  let idx = _questionIdxByPk.get(n);
+  // if map is stale, rebuild once
+  if (idx == null || campaignTrail_temp.questions_json[idx]?.pk !== n) {
+    _rebuildQuestionIdxMap();
+    idx = _questionIdxByPk.get(n);
+  }
+  return idx ?? -1;
+}
+
+// index to assign into question_number before nextQuestion()
+function getJumpIndexFromPk(pk) {
+  const idx = getQuestionIndexFromPk(pk);
+  return idx >= 0 ? idx - 1 : -1;
+}
+
+// for backwards compatibility
+function getQuestionNumberFromPk(pk) {
+  return getJumpIndexFromPk(pk);
+}
+cyoAdventure = function (a) {
+    const ans = campaignTrail_temp.player_answers[campaignTrail_temp.player_answers.length - 1];
+    e.noCounter = campaignTrail_temp.player_answers.length;
+
+    // [JETS_CYOA_VARIABLE_EFFECTS_START]
+    // +1 Cancer
+    if (ans == 5884) {
+        Cancer += 1;
+    }
+
+    // +2 Cancer
+    if (ans == 5903) {
+        Cancer += 2;
+    }
+    // [JETS_CYOA_VARIABLE_EFFECTS_END]
+}
+//#endcode
+
+campaignTrail_temp.jet_data = [{
+    "nicknames": {
+        "1001": "Farage",
+        "1002": "Maxime Bernier",
+        "1003": "Binface",
+        "1004": "New Democratic Party",
+        "1005": "Justin Trudeau",
+        "1007": "Yves-François  Blanchet",
+        "NaN": "Rumen Radev"
+    },
+    "banner_data": {
+        "canName": "Count",
+        "canImage": "",
+        "runName": "Binface",
+        "runImage": ""
+    },
+    "mapping_data": {
+        "mapSvg": "",
+        "x": 144.50408323235206,
+        "y": 144.50408323235206,
+        "dx": -180,
+        "dy": -31,
+        "electionPk": "20"
+    },
+    "bunnyhop_pools": [
+        {
+            "id": 1782321570722,
+            "index": 0,
+            "spots": 1,
+            "spotsCond": ""
+        }
+    ],
+    "mapping_enabled": true,
+    "endings_enabled": true,
+    "player_candidate": 1003,
+    "banner_enabled": true
+}
+]
+
