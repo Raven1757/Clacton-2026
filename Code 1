@@ -1,0 +1,263 @@
+campaignTrail_temp.election_json = [
+    {
+        "model": "campaign_trail.election",
+        "pk": 20,
+        "fields": {
+            "year": 2026,
+            "display_year": "Clacton By-election",
+            "summary": "The year is 2026 in the UK. The nation has suffered more than most and that's been reflected in the polls. The far right Reform UK has dominated them for more than a year. Now that seems to be less than true. With Andy Burnham in number 10, the Labour party has climbed back and even won a few polls. This spells disaster for Nigel Farage, the most infamous politician in the United Kingdom.<p> Nigel Farage comes into this By-election as the incumbent. He is running to show his own popularity  and to turn eyes away from his many controversies</p> <p> Count Binface is running because he can. He knows that this election isn't his to win but damn it will he try.",
+            "site_description": "",
+            "image_url": "https://imgs.search.brave.com/m-BmgA5tMcIWpw3yOfm69DcHLjDSydYw8uk76aZaRQU/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9saXZl/LXByb2R1Y3Rpb24u/d2Ntcy5hYmMtY2Ru/Lm5ldC5hdS9kOTc3/NzkzODZjYjMxYTlh/YTU5OWRmMzU1YzA3/NGM2ND9pbXBvbGlj/eT13Y21zX2Nyb3Bf/cmVzaXplJmNyb3BI/PTQ4OSZjcm9wVz04/NzAmeFBvcz0wJnlQ/b3M9MTkmd2lkdGg9/ODYyJmhlaWdodD00/ODU",
+            "winning_electoral_vote_number": 0,
+            "advisor_url": "123",
+            "recommended_reading": "<ul>\n<li><a href=https://www.chicagotribune.com/opinion/editorials/ct-edit-chicago-tribune-biden-endorsement-20200925-lnyxsb5qvrftnjjmj3rnzj33jy-story.html>Our Case For Joe Biden</a></li>\n</ul>",
+            "recommended_reading_enabled": true,
+            "has_visits": 1,
+            "no_electoral_majority_image": "../static/images/2012-no-majority.jpg"
+        }
+    }
+];
+
+campaignTrail_temp.temp_election_list = [
+    {
+        "id": 20,
+        "year": 2026,
+        "is_premium": 0,
+        "display_year": "Clacton By-election"
+    }
+];
+
+RecReading = true;
+
+campaignTrail_temp.credits = "Not Dan Bryan";
+
+campaignTrail_temp.global_parameter_json = [
+    {
+        "model": "campaign_trail.global_parameter",
+        "pk": 1,
+        "fields": {
+            "vote_variable": 1.125,
+            "max_swing": 0.12,
+            "start_point": 0.94,
+            "candidate_issue_weight": 10,
+            "running_mate_issue_weight": 3,
+            "issue_stance_1_max": -0.71,
+            "issue_stance_2_max": -0.3,
+            "issue_stance_3_max": -0.125,
+            "issue_stance_4_max": 0.125,
+            "issue_stance_5_max": 0.3,
+            "issue_stance_6_max": 0.71,
+            "global_variance": 0.01,
+            "state_variance": 0.005,
+            "question_count": 25,
+            "default_map_color_hex": "#C9C9C9",
+            "no_state_map_color_hex": "#999999"
+        }
+    }
+];
+
+campaignTrail_temp.candidate_json = [
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 1001,
+        "fields": {
+            "first_name": "Nigel",
+            "last_name": "Farage",
+            "election": 20,
+            "party": "Reform UK",
+            "state": "Clacton",
+            "priority": 1,
+            "description": "<p><strong>Nigel Farage</strong></p> The man has become prolific in British politics. He is the instigator of Brexit, the worst decision ever made by the British nation.  He is running to try and push away from the investigation into his finances. Farage was leader of UKIP before forming the Brexit party which then became Reform UK  after Brexit actually came to be. He has been the presumptive PM in waiting since 2025.",
+            "color_hex": "#22d8d5",
+            "secondary_color_hex": "#0d8f91",
+            "is_active": 1,
+            "image_url": "https://file.garden/ajctXfqJL0tJxyhI/Clacton%202026/7093435.webp",
+            "electoral_victory_message": "This guy wins!",
+            "electoral_loss_message": "This guy loses!",
+            "no_electoral_majority_message": "We all win?",
+            "description_as_running_mate": null,
+            "candidate_score": 1,
+            "running_mate": false
+        }
+    },
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 1002,
+        "fields": {
+            "first_name": "Reform ",
+            "last_name": "UK",
+            "election": 20,
+            "party": "Turbo Team",
+            "state": "Idaho",
+            "priority": 1,
+            "description": "<p>Put description here</p>",
+            "color_hex": "#a6a6ab",
+            "secondary_color_hex": null,
+            "is_active": 0,
+            "image_url": "https://www.jetsimon.com/public/candidateexample.png",
+            "electoral_victory_message": "This guy wins!",
+            "electoral_loss_message": "This guy loses!",
+            "no_electoral_majority_message": "We all win?",
+            "description_as_running_mate": "Description as running mate...",
+            "candidate_score": 1,
+            "running_mate": true
+        }
+    },
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 1003,
+        "fields": {
+            "first_name": "Count",
+            "last_name": "Binface",
+            "election": 20,
+            "party": "Binface",
+            "state": "Recyclon",
+            "priority": 1,
+            "description": "<p><strong>Count Binface</p></strong> The man with a plan. The Count. Binface is the main challenger to Nigel Farcerage. He is the inter galactic space warrior that Clacton needs. They might not know it but he does and he is here to help them. Binface has made extremely interesting promises like building at least 1 affordable home. He hears the cheers everytime he announces a policy. Now he preparing for his voyage to the British Parliament",
+            "color_hex": "#a59c9c",
+            "secondary_color_hex": "#c4c4c4",
+            "is_active": 1,
+            "image_url": "https://file.garden/ajctXfqJL0tJxyhI/Clacton%202026/image%20(1).webp",
+            "electoral_victory_message": "Winner!",
+            "electoral_loss_message": "Loser!",
+            "no_electoral_majority_message": "Majority?",
+            "description_as_running_mate": null,
+            "candidate_score": 1,
+            "running_mate": false
+        }
+    }
+];
+
+campaignTrail_temp.running_mate_json = [
+    {
+        "model": "campaign_trail.running_mate",
+        "pk": 1002,
+        "fields": {
+            "candidate": 1001,
+            "running_mate": 1002
+        }
+    },
+    {
+        "model": "campaign_trail.running_mate",
+        "pk": 1004,
+        "fields": {
+            "candidate": 1001,
+            "running_mate": 1002
+        }
+    }
+];
+
+campaignTrail_temp.opponents_default_json = [
+    {
+        "election": 20,
+        "candidates": [
+            1001,
+            1003
+        ]
+    }
+];
+
+campaignTrail_temp.opponents_weighted_json = [
+    {
+        "election": 20,
+        "candidates": [
+            1001,
+            1003
+        ]
+    }
+];
+
+campaignTrail_temp.modBoxTheme = {
+    "header_color": "#020617",
+    "header_text_color": "#f9fafb",
+    "description_background_color": "#1f2937",
+    "description_text_color": "#e5e7eb",
+    "main_color": "#808080",
+    "secondary_color": "#626364",
+    "ui_text_color": "#ffffff",
+    "site_title": "",
+    "site_image_url": ""
+};
+
+jet_data = {
+    "headerColor": "#616161",
+    "headerTextColor": "#ffffff",
+    "windowColor": "#bababa",
+    "containerColor": "#ffffff",
+    "innerWindowColor": "#a6a6a6",
+    "innerWindowTextColor": "#000000",
+    "descriptionWindowColor": "#f8f8f8",
+    "descriptionWindowTextColor": "#000000",
+    "startButtonColor": "#878282",
+    "bannerImageUrl": "https://imgs.search.brave.com/mjf1J8S5lyTUbXoC1kLxr7MKlyOitWHC_PeWJUYn_eM/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pY2hl/Zi5iYmNpLmNvLnVr/L25ld3MvNDgwL2Nw/c3Byb2RwYi9jYmNj/L2xpdmUvNjQxNTM1/MzAtOTI0Yi0xMWYx/LWE2Y2UtYWZlZWUy/NzNiNDJlLmpwZy53/ZWJw",
+    "backgroundImageUrl": "https://www.jetsimon.com/public/static/images/background.jpg",
+    "gameTitle": "THE CAMPAIGN TRAIL",
+    "customQuote": "",
+    "quoteTextColor": "#ffffff",
+    "endingTextColor": "#000000",
+    "modBoxTheme": {
+        "header_color": "#020617",
+        "header_text_color": "#f9fafb",
+        "description_background_color": "#1f2937",
+        "description_text_color": "#e5e7eb",
+        "main_color": "#808080",
+        "secondary_color": "#626364",
+        "ui_text_color": "#ffffff",
+        "site_title": "",
+        "site_image_url": ""
+    }
+};
+
+//#startcode
+function applyTheme(theme) {
+    const gameHeader = document.querySelector(".game_header");
+    if (gameHeader && theme.coloring_title) {
+        gameHeader.style.backgroundColor = theme.coloring_title;
+    }
+
+    const gameWindow = document.getElementById("game_window");
+    if (gameWindow && theme.coloring_window) {
+        gameWindow.style.backgroundColor = theme.coloring_window;
+    }
+
+    const container = document.querySelector(".container");
+    if (container && theme.coloring_container) {
+        container.style.backgroundColor = theme.coloring_container;
+    }
+
+    const headerImg = document.getElementById("header");
+    if (headerImg && theme.header_image) {
+        headerImg.src = theme.header_image;
+    }
+
+    if (theme.body_background) {
+        document.body.style.backgroundImage = `url("${theme.body_background}")`;
+        document.body.style.backgroundSize = "cover";
+        document.body.style.backgroundAttachment = "fixed";
+    }
+
+    const style = document.createElement("style");
+    style.textContent = `
+      #results_container { color: #000000; }
+      #wittyquote { color: #ffffff; }
+      .game_header h2 { color: #ffffff; }
+      .inner_window_w_desc { background-color: #a6a6a6 !important; color: #000000; }
+      .inner_window_front, .person_description_window, .election_description_window, .description_window_small { background-color: #f8f8f8 !important; color: #000000; }
+      .campaign_trail_start_emphasis { background-color: #878282 !important; }
+    `;
+    document.head.appendChild(style);
+}
+
+
+
+const theme = nct_stuff.themes[nct_stuff.selectedTheme];
+
+// define / override theme values
+theme.coloring_title     = "#616161";
+theme.coloring_window    = "#bababa";
+theme.coloring_container = "#ffffff";
+theme.header_image = "https://imgs.search.brave.com/mjf1J8S5lyTUbXoC1kLxr7MKlyOitWHC_PeWJUYn_eM/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pY2hl/Zi5iYmNpLmNvLnVr/L25ld3MvNDgwL2Nw/c3Byb2RwYi9jYmNj/L2xpdmUvNjQxNTM1/MzAtOTI0Yi0xMWYx/LWE2Y2UtYWZlZWUy/NzNiNDJlLmpwZy53/ZWJw";
+theme.body_background = "https://www.jetsimon.com/public/static/images/background.jpg";
+
+applyTheme(theme);
+//#endcode
